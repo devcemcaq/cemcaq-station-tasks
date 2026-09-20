@@ -91,6 +91,7 @@ Convenciones que hay que conservar:
   `libagilaire.py` y que la base `cemcaq`.
 - Se envía la hora local con `UTC_OFFSET` fijo (`-06:00`: Querétaro no tiene
   horario de verano). El backend guarda `timestamptz`.
-- Sólo filas `001H`; las de minuto (`001M`) se ignoran.
+- Se lee únicamente la vista horaria (`ReadingAverageDataLast30Days_001H`);
+  no se filtra por `IntervalName` porque su texto cambia entre instalaciones.
 - El contrato del `POST /api/v1/telemetry/ingest` está en
   `admin-dashboard/docs/telemetry-spec.md`.

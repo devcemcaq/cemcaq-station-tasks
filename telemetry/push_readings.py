@@ -141,11 +141,11 @@ def to_bool(value: Any) -> bool:
 
 
 def rows_to_readings(rows: List[Dict[str, Any]], utc_offset: str) -> List[Dict[str, Any]]:
+    # La consulta ya apunta a la vista horaria (`_001H`), así que no se filtra
+    # por `IntervalName`: su texto cambia entre instalaciones ("001H",
+    # "1 Hour", …) y en FEO descartaba todas las filas.
     readings = []
     for row in rows:
-        interval = (row.get("IntervalName") or "").strip()
-        if interval and interval != "001H":
-            continue
         end = row["Date_Time"] + dt.timedelta(hours=1)  # fin del intervalo
         missing = to_bool(row.get("IsMissing"))
         raw = row.get("ReportValue")
@@ -234,7 +234,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         return EXIT_OK
 
     parameters = sorted({r["parameter"] for r in readings})
-    log.info("%s lecturas de %s parámetros: %s", len(readings), len(parameters), ", ".join(parameters))
+    intervals = sorted({str(row.get("IntervalName")) for row in rows})
+    log.info("%s lecturas de %s parámetros: %s (IntervalName: %s)", len(readings), len(parameters), ", ".join(parameters), ", ".join(intervals))
 
     if args.dry_run:
         print(json.dumps({"intervalMinutes": INTERVAL_MINUTES, "readings": readings[:5]}, indent=2, ensure_ascii=False))

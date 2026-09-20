@@ -8,5 +8,5 @@
   {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 24.96, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "PM2.5", "ReportedUnitName": "UG/M3", "SiteName": "FEO"},
   {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 25.8, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"},
   {"Date_Time": "2026-09-16T12:00:00", "ReportValue": null, "IntervalName": "001H", "IsMissing": true, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"},
-  {"Date_Time": "2026-09-16T12:00:00", "ReportValue": 26.1, "IntervalName": "001M", "IsMissing": false, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"}
+  {"Date_Time": "2026-09-16T13:00:00", "ReportValue": 26.1, "IntervalName": "1 Hour", "IsMissing": false, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"}
 ]
