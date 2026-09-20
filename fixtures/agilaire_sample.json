@@ -1,0 +1,12 @@
+[
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 6.95, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "NO", "ReportedUnitName": "PPB", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 15.53, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "NO2", "ReportedUnitName": "PPB", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 22.48, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "NOx", "ReportedUnitName": "PPB", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 5.37, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "SO2", "ReportedUnitName": "PPB", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 0.38, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "CO", "ReportedUnitName": "PPM", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 43.93, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "O3", "ReportedUnitName": "PPB", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 24.96, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "PM2.5", "ReportedUnitName": "UG/M3", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T11:00:00", "ReportValue": 25.8, "IntervalName": "001H", "IsMissing": false, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T12:00:00", "ReportValue": null, "IntervalName": "001H", "IsMissing": true, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"},
+  {"Date_Time": "2026-09-16T13:00:00", "ReportValue": 26.1, "IntervalName": "1 Hour", "IsMissing": false, "IsValid": true, "ParameterName": "Temp Bench O3", "ReportedUnitName": "DEGC", "SiteName": "FEO"}
+]
