@@ -205,9 +205,22 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--hours", type=int, help="horas hacia atrás a reenviar (default: LOOKBACK_HOURS del .env)")
     parser.add_argument("--dry-run", action="store_true", help="arma el lote y lo imprime sin enviarlo")
     parser.add_argument("--from-json", type=Path, help="lee las filas de un JSON con las columnas de la vista en vez de SQL Server")
-    args = parser.parse_args(argv)
-
+    # La bitácora se abre ANTES de leer los argumentos: si la tarea programada
+    # (o un copiar/pegar con un comentario detrás del comando) manda basura,
+    # argparse aborta, y sin esto no quedaba rastro en logs\telemetry.log.
     setup_logging()
+    try:
+        args = parser.parse_args(argv)
+    except SystemExit:
+        extra = " ".join(argv if argv is not None else sys.argv[1:])
+        if extra:
+            log.error(
+                "argumentos no reconocidos: %s — este script sólo acepta "
+                "--hours, --dry-run y --from-json; no escribas nada más "
+                "después del comando",
+                extra,
+            )
+        raise
     try:
         cfg = load_config()
     except ValueError as exc:
