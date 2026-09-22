@@ -63,6 +63,9 @@ internet de salida por HTTPS.
 
 ## Operación
 
+- **Los comandos van solos**: lo que se escriba a la derecha (un comentario,
+  por ejemplo) se le pasa como argumento al extractor y aborta sin enviar
+  nada. Si `logs\telemetry.log` no crece, empezar por ahí.
 - Bitácora: `logs\telemetry.log` (rotativa, 5 × 1 MB). Códigos de salida:
   `1` configuración, `2` datalogger/SQL Server, `3` envío (la clave rechazada
   no se reintenta; un error de red se reintenta 3 veces).
